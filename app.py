@@ -85,3 +85,17 @@ if st.button("🔥 Odaklanmaya Başla", use_container_width=True):
     
     st.success("Tebrikler! Bir seansı daha başarıyla bitirdin. 🎉")
     st.snow()
+    # Titreşim ve Bildirim için JavaScript Kodu
+    st.components.v1.html(
+        """
+        <script>
+        // Telefonu 3 saniye (3000 ms) titretir
+        if (window.navigator && window.navigator.vibrate) {
+            window.navigator.vibrate(3000);
+        } else {
+            console.log("Titreşim bu cihazda desteklenmiyor.");
+        }
+        </script>
+        """,
+        height=0,
+    )
